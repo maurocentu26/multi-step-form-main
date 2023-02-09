@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [View solution on GitHub](https://github.com/maurocentu26/multi-step-form-main)
+- Live Site URL: [View deploy on Vercel](https://multi-step-form-main-clsbarive-maurocentu26.vercel.app/)
 
 ## My process
 
@@ -58,4 +58,4 @@ I think that my weakness is still CSS... Mostly because I did a couple of tricks
 ## Author
 
 - Website - [Mauro Centurion](https://github.com/maurocentu26)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/maurocentu26)
+- Frontend Mentor - [@maurocentu26](https://www.frontendmentor.io/profile/maurocentu26)
