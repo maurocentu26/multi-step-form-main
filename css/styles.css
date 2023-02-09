@@ -1,0 +1,530 @@
+@font-face {
+   font-family: Ubuntu;
+   src: url(../assets/fonts/Ubuntu-Bold.ttf);
+   font-weight: 800;
+}
+@font-face {
+   font-family: Ubuntu;
+   src: url(../assets/fonts/Ubuntu-Regular.ttf);
+   font-weight: 500;
+}
+@font-face {
+   font-family: Ubuntu;
+   src: url(../assets/fonts/Ubuntu-Medium.ttf);
+   font-weight: 700;
+}
+
+
+:root{
+   /* Primary colors */
+   --marine-blue: hsl(213, 96%, 18%);
+   --purplish-blue: hsl(243, 100%, 62%);
+   --pastel-blue: hsl(228, 100%, 84%);
+   --light-blue: hsl(206, 94%, 87%);
+   --strawberry-red: hsl(354, 84%, 57%);
+   /* Neutral colors */
+   --cool-gray: hsl(231, 11%, 63%);
+   --light-gray: hsl(229, 24%, 87%);
+   --magnolia: hsl(217, 100%, 97%);
+   --alabaster: hsl(231, 100%, 99%);
+   --white: hsl(0, 0%, 100%);
+}
+
+*{
+   box-sizing: border-box;
+}
+
+body{
+   background: var(--alabaster);
+   margin: 0;
+   padding: 0;
+   font-family: Ubuntu;
+}
+
+/* Settings main */
+button{
+   font-family: Ubuntu;
+   padding: 0;
+   background: none;
+   border: none;
+}
+.page__button{
+   border: none;
+   font-weight: 700;
+   background: var(--marine-blue);
+   color: var(--white);
+   padding: .7rem 1.2rem;
+   position: absolute;
+   bottom: 0;
+   border-radius: .3rem;
+}
+.page__button.next, .page__button.confirm{
+   right: 0;
+}
+.page__button.back{
+   left: 0;
+   background: none;
+   color: var(--cool-gray);
+}
+
+button:hover{
+   cursor: pointer;
+}
+
+ul, h2, h3, span, p{
+   margin: 0;
+   padding: 0;
+}
+li{
+   list-style: none;
+}
+
+.main{
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.main__container{
+   background: var(--white);
+   filter: drop-shadow(.1rem .11rem 1rem #eeeeee);
+   display: flex;
+   padding: .7rem;
+   height: 33rem;
+   width: clamp(30rem, 70%, 53rem);
+   border-radius: 1rem;
+}
+/* ------------------------------------------------ */
+/* Steps info styles */
+.steps__info{
+   text-transform: uppercase;
+   background: url(../assets/images/bg-sidebar-desktop.svg) no-repeat center bottom;
+   padding: 1rem 2rem 0 1rem;
+   width: 18rem;
+   border-radius: inherit;
+}
+
+.steps__info__container{
+   padding: 1rem 0;
+}
+
+.step__number-text{
+   color: var(--cool-gray);
+   font-size: .8rem;
+}
+.step-title{
+   color: var(--white);
+   font-size: .9rem;
+   font-weight: 600;
+   letter-spacing: .1rem;
+}
+
+.steps__ul{
+   display: flex;
+   flex-direction: column;
+   gap: 1.8rem;
+}
+
+.steps__ul-item{
+   height: 2rem;
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+}
+
+.step__number{
+   color: var(--white);
+   width: 2rem;
+   height: 2rem;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1px solid var(--white);
+}
+.step__number.active{
+   color: #000;
+   background: var(--light-blue);
+}
+/* ------------------------------------------------ */
+/* Steps info styles */
+.step{
+   position: relative;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.page__step__container{
+   width: 80%;
+   position: absolute;
+   height: calc(100% - 3rem);
+   gap: 2.5rem;
+   display: flex;
+   flex-direction: column;
+}
+
+.page__form{
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+}
+
+.page__header{
+   display: flex;
+   flex-direction: column;
+   gap: .5rem;
+}
+
+.step__title{
+   text-transform: capitalize;
+   font-size: 1.6rem;
+   color: var(--marine-blue);
+   font-weight: 800;
+}
+.step__description{
+   font-size: 1rem;
+   font-weight: 500;
+   color: var(--cool-gray);
+}
+
+.form__label{
+   font-size: .8rem;
+   color: var(--marine-blue);
+}
+
+.input__container{
+   min-width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: .3rem;
+}
+
+input{
+   font-family: Ubuntu;
+   font-weight: 800;
+   color: var(--marine-blue);
+   border: 1px solid var(--light-gray);
+   padding: .7rem .6rem;
+   border-radius: .5rem;
+}
+input.no-valid{
+   border-color: var(--strawberry-red);
+}
+input::placeholder{
+   color: var(--cool-gray);
+   font-weight: 700;
+}
+input:hover{
+   border-color: var(--purplish-blue);
+   cursor: pointer;
+}
+
+.validate__input{
+   right: 0;
+   position: absolute;
+   font-weight: 800;
+   font-size: .8rem;
+   color: var(--strawberry-red);
+}
+/* ------------------------------------------------ */
+/* Steps plans styles */
+.page__plans{
+   justify-content: space-between;
+   display: flex;
+   gap: 1rem;
+}
+
+.page__plans-item{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 1rem .8rem .8rem;
+   border: 1px solid var(--light-gray);
+   height: 11rem;
+   width: 10rem;
+   border-radius: .5rem;
+}
+.page__plans-item:hover{
+   cursor: pointer;
+   background: var(--alabaster);
+}
+.page__plans-item.selected{
+   border-color: var(--purplish-blue);
+}
+
+.plan__title{
+   color: var(--marine-blue);
+   font-weight: 800;
+   margin-bottom: .2rem;
+}
+
+.plan__price{
+   color: var(--cool-gray);
+   font-size: .9rem;
+}
+
+.plan__type{
+   padding: .8rem 0;
+   background: var(--alabaster);
+   display: flex;
+   justify-content: center;
+   gap: .6rem;
+   color: var(--cool-gray);
+   border-radius: .5rem;
+}
+.plan__type-item.selected{
+   font-weight: 800;
+   color: var(--marine-blue);
+}
+
+.month-promotion{
+   color: var(--marine-blue);
+   font-size: .9rem;
+   margin-top: -2rem;
+}
+
+.plan__switch{
+   position: relative;
+   width: 2.2rem;
+   background-color: var(--marine-blue);
+   border-radius: 1rem;
+   padding: .2rem;
+}
+.plan__switch:hover{
+   cursor: pointer;
+}
+.plan__switch::after{
+   background: #fff;
+   position: absolute;
+   content: "";
+   border-radius: 50%;
+   width: .8rem;
+   height: .8rem;
+   transition: transform .2s;
+}
+.plan__switch.yearly::after{
+   transform: translateX(1rem);
+}
+/* ------------------------------------------------ */
+/* Add-ons styles */
+.page__addons{
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+.page__addons-item{
+   border: 1px solid var(--light-gray);
+   border-radius: .5rem;
+   display: flex;
+   align-items: center;
+   padding: 1rem;
+   gap: 1rem;
+}
+.page__addons-item.active{
+   border: 1px solid var(--purplish-blue);
+   background: var(--alabaster);
+}
+
+.addon__checkbox{
+   appearance: none;
+   width: 1.5rem;
+   height: 1.5rem;
+   border: 1px solid var(--cool-gray);
+}
+.page__addons-item.selected{
+   border: 1px solid var(--purplish-blue);
+   background: var(--alabaster);
+}
+.addon__checkbox:checked{
+   background: var(--purplish-blue) url(../assets/images/icon-checkmark.svg) no-repeat center center;
+}
+.addon__checkbox:active{
+   border: 1px solid var(--purplish-blue);
+}
+
+.addon__text{
+   width: 20rem;
+}
+
+.addon__title{
+   color: var(--marine-blue);
+   font-weight: 800;
+   margin-bottom: .3rem;
+}
+
+.addon__description{
+   color: var(--cool-gray);
+}
+
+.addon__price{
+   color: var(--purplish-blue);
+}
+/* ------------------------------------------------ */
+/* Summary page styles */
+.summary__details{
+   border-radius: .8rem;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   background-color: var(--alabaster);
+   padding: 1rem;
+   gap: 1rem;
+}
+
+.row{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+hr{
+   width: 100%;
+}
+
+.sumary__plan-title{
+   color: var(--marine-blue);
+   font-weight: 800;
+}
+
+.change__plan{
+   color: var(--cool-gray);
+   text-decoration: underline;
+   margin-top: .3rem;
+}
+
+.addon__price-selected{
+   color: var(--marine-blue);
+}
+.addon__price-selected.bold{
+   font-weight: 800;
+}
+
+.summary__payment-final{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   padding: 0 1rem;
+}
+
+.summary__total{
+   font-size: 1.3rem;
+   font-weight: 800;
+   color: var(--purplish-blue);
+}
+
+.confirm{
+   background: var(--purplish-blue);
+}
+/* ------------------------------------------------ */
+/* Thanks page styles */
+#thanks{
+   justify-content: center;
+   align-items: center;
+   gap: 1.8rem;
+}
+
+.thanks__icon{
+   text-align: center;
+}
+
+.step__title.thanks{
+   text-align: center;
+   margin-bottom: 1rem;
+}
+
+.thanks__paragraph{
+   text-align: center;
+   color: var(--cool-gray);
+}
+/* ------------------------------------------------ */
+.page__step__container{
+   display: none;
+}
+.page__step__container.active{
+   display: flex;
+}
+
+@media screen and (max-width: 950px){
+   .page__button.next, .page__button.confirm{
+      bottom: -1rem;
+      right: -1rem;
+   }
+   .page__button.back{
+      left: -1rem;
+      bottom: -1rem;
+   }
+
+   .main{
+      display: block;
+      position: relative;
+   }
+   .main__container{
+      background: none;
+      padding: 0;
+      flex-direction: column;
+      width: 100%;     
+   }
+
+   .steps__info{
+      display: block;
+      width: 100vw;
+      background: var(--purplish-blue) url(../assets/images/bg-sidebar-desktop.svg) no-repeat  bottom;
+      background-size: 100%;
+      height: clamp(10rem, 30%, 20rem);
+      border-radius: 0;
+   }
+
+   .step{
+      border-radius: .8rem;
+      position: absolute;
+      background: var(--white);
+      width: clamp(20rem, 90%, 30rem);
+      height: clamp(40rem, 60%, 45rem);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -30%);
+   }
+
+   .steps__info__container{
+      display: flex;
+      height: 100%;
+      justify-content: center;
+   }
+
+   .page__header{
+      align-self: center;
+   }
+
+   .step__description{
+      display: none;
+   }
+
+   .steps__ul{
+      flex-direction: row;
+   }  
+
+   .page__plans{
+      flex-direction: column;
+   }
+   .page__plans-item{
+      position: relative;
+      height: 5rem;
+      flex-direction: row;
+      gap: 1rem;
+      justify-content: initial;     
+      width: 100%;
+   }
+   .plan__info{
+      margin-top: -.5rem;
+   }
+   .month-promotion.absolute{
+      position: absolute;
+      bottom: .4rem;
+      left: 4.3rem;
+   }  
+}
