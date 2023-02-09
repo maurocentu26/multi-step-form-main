@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
          if (alertExists) alertExists.remove();
 
          const alert = document.createElement("SPAN");
-         alert.classList.add("validate__input");
+         alert.classList.add("validate__input", "bottom");
          alert.innerHTML = "You have to select a plan";
 
          currentPage.appendChild(alert);
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
          if (alertExists) alertExists.remove();
 
          const alert = document.createElement("SPAN");
-         alert.classList.add("validate__input");
+         alert.classList.add("validate__input", "bottom");
          alert.innerHTML = "You have to select an add-on";
 
          currentPage.appendChild(alert);
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const alert = document.createElement("SPAN");
       alert.textContent = mensaje;
-      alert.classList.add("validate__input");
+      alert.classList.add("validate__input", "input");
 
       input.classList.add("no-valid");
 
