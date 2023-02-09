@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [View solution on GitHub](https://github.com/maurocentu26/multi-step-form-main)
-- Live Site URL: [View deploy on Vercel](https://multi-step-form-main-clsbarive-maurocentu26.vercel.app/)
+- Live Site URL: [View deploy on Vercel](https://multi-step-form-main-iota.vercel.app/)
 
 ## My process
 
