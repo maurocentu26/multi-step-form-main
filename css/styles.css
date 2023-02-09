@@ -496,6 +496,15 @@ hr{
       justify-content: center;
    }
 
+   .validate__input.input{
+      margin-top: 4rem;
+   }
+   .validate__input.bottom{
+      bottom: 4rem;
+      right: 50%;
+      transform: translate(50%, 0);
+   }
+
    .page__header{
       align-self: center;
    }
